@@ -42,7 +42,7 @@ cookies = login_request.cookies
 
 # When pages uses a pagination, create a loop to automatically itter over the pages.
 for i in range(1,2):
-    scrapping_url = 'web-example/admin.php?s=sold+houses&paged='{i}'
+    scrapping_url = f'web-example/admin.php?s=sold+houses&paged={i}'
     # Read the url by joining the main url and the sub url.
     soup = BeautifulSoup(s.get(url + scrapping_url).text, 'html.parser')
 
